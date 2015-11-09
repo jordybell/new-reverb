@@ -7,15 +7,9 @@ author:
 copyright: 2015 Reverb Designs
 url: 'htps://reverbdesigns.com/autocode/'
 imports:
-  crystal/handlebars: ~0.4.0
-  crystal/npm: ~0.4.0
+  crystal/php: ~0.3.2
 outputs:
-  - generator: npm.PackageGenerator
+  - generator: php.ConfigGenerator
     spec:
-      name: myapp
-      version: 1.0.0
-      description: "myapp's description"
-      dependencies:
-        express: ~4.13.3
-        grunt: ~0.4.5
-        sequelize: ~3.5.1
+      register_globals: false
+      include_path: /usr/local
